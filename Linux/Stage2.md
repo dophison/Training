@@ -8,4 +8,4 @@ find ~ -name "son.txt" (tìm ở home directory với tham số -name)
 
 find /home/dophison/Pictures/ -name *.jpg
 
-[![FindCommand]()](/Images/findname_ext.png)
+[![FindCommand](/Images/findname_ext.png)
