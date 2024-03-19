@@ -4,4 +4,4 @@
 
 **Task 1**
 
-1. [Linux Command]()
+1. [Linux Command](https://github.com/dophison/Training/blob/main/Linux/Stage2.md)
