@@ -116,7 +116,25 @@ Trong đó tham số -shc có nghĩa là tóm tắt các đường dẫn với c
 ```lvs```             Display information about logical volumes;
 ```vgs```             Display information about volume groups)
 
+## CPU
 
+Một số các lệnh như :
+
+```lscpu```
+
+![CPU](/Images/lscpu.png)
+
+Chi tiết thông số trong  ```/proc/cpuinfo```
+
+Và theo thời gian thực như:
+
+```top```
+
+![CPU](/Images/top_cpu.png)
+
+```mpstat```
+
+![CPU](/Images/mpstat_2s.png)
 
 
 
