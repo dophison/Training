@@ -94,12 +94,23 @@ Lệnh du giúp kiểm tra dung lượng ổ đĩa được sử dụng bởi c�
 du <option> <path|file>
 du <option> <path1> <path2> <path3>  
 ```
+
 ![Disk](/Images/du_file_path.png)
 
 Trong đó tham số -shc có nghĩa là tóm tắt các đường dẫn với các đơn vị có thể đọc được và nếu có nhiều đường dẫn thì sẽ tính tổng dung lượng
 
+ > **Phân vùng /** là phân vùng root, chứa các tệp và thư mục quan trọng nhất của hệ thống. Việc cung cấp đủ không gian lưu trữ cho phân vùng / là rất quan trọng để hệ thống có thể hoạt động một cách ổn định và hiệu quả
 
- 
+![Disk](/Images/df_root.png)
+
+> **Phân vùng tmpfs**  dùng để sử dụng để lưu trữ dữ liệu tạm thời trong bộ nhớ RAM thay vì trên đĩa cứng.
+
+![Disk](/Images/df_tmpfs.png)
+
+> **Inode** là một cấu trúc dữ liệu. Nó xác định một file hoặc một thư mục trên hệ thống file và được lưu trữ trong directory entry nodes trỏ đến các block tạo nên một file. Khi sử dụng hết các inodes, ngay cả khi có đủ dung lượng trống trên đĩa, bạn sẽ không thể tạo file mới.
+
+![Disk](/Images/df_ih.png)
+
 
 
 
