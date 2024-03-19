@@ -8,7 +8,7 @@
 ```sh
 find /home/dophison/Pictures/ -name *.jpg
 ```
-[![FindCommand]()](/Images/findname_ext.png)
+![FindCommand](/Images/findname_ext.png)
 
 ## Với giá trị -maxdepth, -mindepth 
 (mục đích không muốn tìm quá sâu/tất cả bên trong thư mục)
@@ -86,6 +86,7 @@ Trong đó:
 
 Chi tiết hơn thì thêm vào sau đó đĩa/phân vùng cụ thể
 ```df <option> path```
+
 ![Disk](/Images/df_h_root.png)
 
 Lệnh du giúp kiểm tra dung lượng ổ đĩa được sử dụng bởi các thư mục 
@@ -94,6 +95,7 @@ du <option> <path|file>
 du <option> <path1> <path2> <path3>  
 ```
 ![Disk](/Images/du_file_path.png)
+
 Trong đó tham số -shc có nghĩa là tóm tắt các đường dẫn với các đơn vị có thể đọc được và nếu có nhiều đường dẫn thì sẽ tính tổng dung lượng
 
 
