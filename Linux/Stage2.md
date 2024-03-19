@@ -107,10 +107,14 @@ Trong đó tham số -shc có nghĩa là tóm tắt các đường dẫn với c
 
 ![Disk](/Images/df_tmpfs.png)
 
-> **Inode** là một cấu trúc dữ liệu. Nó xác định một file hoặc một thư mục trên hệ thống file và được lưu trữ trong directory entry nodes trỏ đến các block tạo nên một file. Khi sử dụng hết các inodes, ngay cả khi có đủ dung lượng trống trên đĩa, bạn sẽ không thể tạo file mới.
+> **Inode** là một cấu trúc dữ liệu. Nó xác định một file hoặc một thư mục trên hệ thống file và được lưu trữ trong directory entry nodes trỏ đến các block tạo nên một file. **Khi sử dụng hết các inodes, ngay cả khi có đủ dung lượng trống trên đĩa, bạn sẽ không thể tạo file mới.**
 
 ![Disk](/Images/df_ih.png)
 
+> **Phân vùng LVM** cho phép chia không gian đĩa cứng thành những Logical Volume từ đó giúp cho việc thay đổi kích thước trở nên dễ dàng.
+```pvs```             Display information about physical volumes
+```lvs```             Display information about logical volumes
+```vgs```             Display information about volume groups
 
 
 
