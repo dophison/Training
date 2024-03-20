@@ -116,6 +116,21 @@ Trong đó tham số -shc có nghĩa là tóm tắt các đường dẫn với c
 ```lvs```             Display information about logical volumes;
 ```vgs```             Display information about volume groups)
 
+
+## Mount/Umount Partition
+
+```mount [options] <source> <directory>```
+
+Mount một ổ cứng nvme0n1p3 vào trong /media/Test
+![Mount](/Images/mount.png)
+
+```umount [-hV]```
+
+Umount ổ cứng nvme0n1p3 trong /media/Test
+
+![Mount](/Images/umount.png)
+
+
 ## CPU
 
 Một số các lệnh như :
@@ -169,18 +184,7 @@ Với câu lệnh ```stress --cpu 2 --timeout 120```,  2 tiến trình được 
 
 ![Stress](/Images/stress_evaluate.png)
 
-## Mount/Umount Partition
 
-```mount [options] <source> <directory>```
-
-Mount một ổ cứng nvme0n1p3 vào trong /media/Test
-![Mount](/Images/mount.png)
-
-```umount [-hV]```
-
-Umount ổ cứng nvme0n1p3 trong /media/Test
-
-![Mount](/Images/umount.png)
 
 # RAM
 
@@ -270,7 +274,21 @@ Kịch bản thực hiện như sau: kiểm tra thuộc tính của các file b�
 - Vi/Vim: ```i```: insert, ```del```: delete, ```(ESC) + :wq```: save, ```(ESC) + :q!```: exit
 - nano: nhập xóa dữ liệu trực tiếp,  "Ctr+ X+Yes/No" : save /don't save and exit
 
+# Symbolic Links, Hard Links
 
+## Hard Links
+```ln [file nguồn] [file đích]```
+Là các liên kết cấp thấp ( low-level links), tạo một liên kết trong cùng hệ thống tập tin với 2 inode entry tương ứng trỏ đến cùng một nội dung vật lý.  
+
+Có thể thấy 2 file ```son.txt``` và ```son_backup.txt``` có cùng inode và nội dung.
+
+![Hardlink](/Images/hard_link.png)
+
+## Symbolic Links
+```ln -s [file nguồn] [file đích]```
+Tương tự như một shortcut trong Windows, không dùng đến inode entry. Sẽ tạo ra một inode mới và nội dung của inode này trỏ đến tên tập tin gốc.
+
+![Hardlink](/Images/ln_s.png)
 
 
 
