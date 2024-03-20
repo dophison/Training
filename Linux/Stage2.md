@@ -137,7 +137,17 @@ Và theo thời gian thực như:
 ![CPU](/Images/mpstat_2s.png)
 
 
-
+- load average : thời gian tải trung bình (the last 1 minute, the last 5 minutes, and the last 15 minutes)
+- zombie process : 
+- sleeping process : 
+- us :
+- sy :
+- ni :
+- id :
+- wa :
+- hi :
+- si :
+- st :
 
 
 
