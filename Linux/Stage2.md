@@ -285,10 +285,23 @@ Có thể thấy 2 file ```son.txt``` và ```son_backup.txt``` có cùng inode v
 ![Hardlink](/Images/hard_link.png)
 
 ## Symbolic Links
-```ln -s [file nguồn] [file đích]```
+```ln -s [file nguồn] [file đích]``` (có thể dùng cho thư mục)
 Tương tự như một shortcut trong Windows, không dùng đến inode entry. Sẽ tạo ra một inode mới và nội dung của inode này trỏ đến tên tập tin gốc.
 
-![Hardlink](/Images/ln_s.png)
+![Symbolic](/Images/ln_s.png)
+
+# Compression
+
+```tar``` lệnh phổ biến nhất để nén và giải nén file và thư mục. Nén file bằng ```tar``` sẽ cho kết quả là file ```.tar```.
+
+Lệnh nén:
+```tar -cvf [tên file sau nén] [thư mục/file cần nén]```
+```tar -cvzf``` : dùng để tạo file ```tar.gz``` 
+
+Lệnh giải nén:
+```tar -xvf ```
+
+![Compression](/Images/tar.png)
 
 
 
