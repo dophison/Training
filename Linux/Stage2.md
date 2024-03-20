@@ -308,6 +308,31 @@ Lệnh giải nén:
 ![Compression](/Images/zip.png)
 
 
+## Telnet
+Giao tiếp với máy chủ khác bằng giao thức Telnet.
+``telnet [host] [port]``
+
+![ToolNetwork](/Images/telnet.png)
+
+## ping
+
+```ping [options] <destination>```
+
+Dưới hình sư dụng [option] là ``-c`` dùng để dừng gửi sau số lần chỉ định.
+>ping is running an ICMP echo request 
+
+![ToolNetwork](/Images/ping.png)
+
+## hping3
+
+```hping3 host [options]```
+
+>hping3 is running a "ping" using the TCP protocol on port 80
+
+Hình ảnh mô tả thực hiện scan port từ 1 tới 1000, port 8888 và tất cả các port liệt kê trong /etc/services.
+
+![ToolNetwork](/Images/hping3.png)
+
 
 
 
