@@ -342,9 +342,11 @@ Kịch bản là một máy X sẽ tạo ra pubkey như hình bằng ```ssh-keyg
 ![ToolNetwork](/Images/sshkeygen.png)
 
 Server sẽ thêm public key vào trong ``authorized_keys``.
+
 ![ToolNetwork](/Images/author.png)
 
 Máy X thông qua ssh có thể truy cập vào server.
+
 ![ToolNetwork](/Images/ssh_pubkey.png)
 
 Tiếp tục thử với kịch bản là thay đổi port của ssh thành **123** và truy cập:
@@ -361,5 +363,11 @@ Truy cập ``ssh username@IP -p 123``
 
 ![ToolNetwork](/Images/ssh_newport.png)
 
+## scp 
+SCP (secure copy) là một tiện ích dòng lệnh cho phép sao chép an toàn các tệp và thư mục (From your local system to a remote system)
 
+```scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2```
 
+Thực hiện kịch bản từ một máy gửi tệp và thư mục  (thêm tham số ```-r ``` vào)  đến  máy khác 
+
+![ToolNetwork](/Images/scp.png)
