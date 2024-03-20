@@ -368,6 +368,17 @@ SCP (secure copy) là một tiện ích dòng lệnh cho phép sao chép an toà
 
 ```scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2```
 
-Thực hiện kịch bản từ một máy gửi tệp và thư mục  (thêm tham số ```-r ``` vào)  đến  máy khác 
+Thực hiện kịch bản từ một máy gửi tệp và thư mục  (thêm tham số ```-r ``` vào) đến máy khác 
 
 ![ToolNetwork](/Images/scp.png)
+
+## rsync 
+file, folder, rsync incremental.
+Dùng để sao lưu và đồng bộ dữ liệu. giữa các máy 
+```rsync options source destination```
+Thực hiện việc đồng bộ từ máy local lên máy VPS thông qua  ```rsync -avzhe ssh Linux/ root@vpsson:/home/rsyn_from_local/```
+
+![ToolNetwork](/Images/rsync_ssh.png)
+
+
+
