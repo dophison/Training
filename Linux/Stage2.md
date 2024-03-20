@@ -138,16 +138,24 @@ Và theo thời gian thực như:
 
 
 - load average : thời gian tải trung bình (the last 1 minute, the last 5 minutes, and the last 15 minutes)
-- zombie process : 
-- sleeping process : 
-- us :
-- sy :
-- ni :
-- id :
-- wa :
-- hi :
-- si :
-- st :
+- zombie process : là những tiến trình tuy đã chấm dứt nhưng chưa xóa hoàn toàn trong bảng tiến trinh, đợi tiến trình cha cập nhật thông tin trạng thái. 
+>```ps aux | egrep "Z|defunct"``` : tìm các tiến trình khả nghi khi dùng ```top``` thấy có tiến trình zombie xuất hiện .
+Tiêu diệt bằng cách:
+     - Tìm ra tiến trình cha của tiến trình zombie :  ```ps -o ppid= -p  <pid>```
+     - XáC định tiến trình cha có tồn tại hay không: ```ps -e | grep <ppid>```
+     - ```kill -SIGKILL <ppid>```
+     
+- sleeping process : là những tiến trình đang ở trạng thái đợi từ một tiến trình khác
+- us : Thời gian CPU sử dụng cho các tiến trình người dùng. (User space)
+- sy : Thời gian CPU sử dụng cho các tác vụ hệ thống. (Kernel space)
+> Vì Linux là monolitic kernel nên sẽ đặc trưng bởi hai không gian user và kernel
+
+- ni : Thời gian CPU sử dụng cho các tiến trình được ưu tiên. (do người dùng xác định) 
+- id : Thời gian CPU nhàn rỗi.
+- wa : Thời gian CPU chờ đợi để xử lý các yêu cầu I/O.
+- hi : Thời gian CPU sử dụng cho xử lý các ngắt phần cứng.
+- si : Thời gian CPU sử dụng cho xử lý các ngắt phần mềm.
+- st : Thời gian CPU liên quan đến phần ảo hóa.
 
 
 
