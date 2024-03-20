@@ -169,7 +169,7 @@ Với câu lệnh ```stress --cpu 2 --timeout 120```,  2 tiến trình được 
 
 ![Stress](/Images/stress_evaluate.png)
 
-## RAM
+# RAM
 
 Chi tiết thông số trong  ```/proc/meminfo```
 
@@ -191,7 +191,7 @@ Trong đó:
 
 > Có thể xác định đươc ram còn trống trong cột ```free``` hoặc ```available```. Ngoài ra, tổng số bộ nhớ có thể sử dụng sẽ bằng free + buff/cache.
 
-## Process Manager
+# Process Manager
 
 Kich bản sử dụng là sẽ có một tiến trình stress chạy và dùng ```ps ``` để kiểm tra sau đó sẽ xác định pid và ```kill``` tiến trình đó.
 
@@ -222,7 +222,7 @@ Tìm kiếm, copy, di chuyển,... file/thư mục
 ![WorkDF](/Images/mv.png)
 
 
-## Permission
+# Permission
 
 ```chmod```: dùng đê cấp quyền cho file, thư mục, bao gồm các quyền như read, write, execute 
 ```chmod [OPTION]... OCTAL-MODE FILE...```
@@ -234,12 +234,13 @@ Tìm kiếm, copy, di chuyển,... file/thư mục
 
 ![Permit](/Images/chown.png)
 
-chattr (Change Attribute) cho phép thay đổi thuộc tính của file giúp bảo vệ file khỏi bị xóa hoặc ghi đè nội dung, dù cho có đang là user root.
+```chattr``` (Change Attribute) cho phép thay đổi thuộc tính của file giúp bảo vệ file khỏi bị xóa hoặc ghi đè nội dung, dù cho có đang là user root.
 ```chattr [operator] [flags] [filename]```
 [_operator_] gồm:
 - +: Thêm thuộc tính cho file.
 - -: Gỡ bỏ thuộc tính khỏi file.
 - =: Giữ nguyên thuộc tính của file.
+
 [_flags_] gồm:
 - ```i```: Flag này khiến file không thể rename, không thể tạo symlink, không thể thực thi, không thể write. Chỉ có user root mới set và unset được thuộc tính này.
 - ```a```: Tương tự như flag ```i``` nhưng có quyèn write.
@@ -251,8 +252,23 @@ Kịch bản thực hiện như sau: kiểm tra thuộc tính của các file b�
 
 ![Permit](/Images/chattr.png)
 
+# Editor 
 
+- Vi/Vim: ```i```: insert, ```del```: delete, ```(ESC) + :wq```: save, ```(ESC) + :q!```: exit
+- nano: nhập xóa dữ liệu trực tiếp,  "Ctr+ X+Yes/No" : save /don't save and exit
 
+## Mount/Umount Partition
+
+```mount [options] <source> <directory>```
+
+Mount một ổ cứng nvme0n1p3 vào trong /media/Test
+![Mount](/Images/mount.png)
+
+```umount [-hV]```
+
+Umount ổ cứng nvme0n1p3 trong /media/Test
+
+![Mount](/Images/umount.png)
 
 
 
