@@ -199,7 +199,27 @@ Kich bản sử dụng là sẽ có một tiến trình stress chạy và dùng 
 
 ![Process](/Images/kill.png)
 
+## Working with dicrection and folder 
 
+Liệt kê danh sách file/thư mục, cách show các file ẩn trong thư mục
+
+```ls [OPTION]... [FILE]...```
+
+Dùng ```ls -a```
+
+![WorkDF](/Images/ls_a.png)
+
+Tìm kiếm, copy, di chuyển,... file/thư mục
+
+``find``` [ở trên](#tìm-kiếm-một-file-directory)
+
+```cp [OPTION]... SOURCE... DIRECTORY```
+
+![WorkDF](/Images/cp.png)
+
+```mv [OPTION]... SOURCE... DIRECTORY```
+
+![WorkDF](/Images/mv.png)
 
 
 
