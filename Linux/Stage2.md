@@ -169,6 +169,19 @@ Với câu lệnh ```stress --cpu 2 --timeout 120```,  2 tiến trình được 
 
 ![Stress](/Images/stress_evaluate.png)
 
+## Mount/Umount Partition
+
+```mount [options] <source> <directory>```
+
+Mount một ổ cứng nvme0n1p3 vào trong /media/Test
+![Mount](/Images/mount.png)
+
+```umount [-hV]```
+
+Umount ổ cứng nvme0n1p3 trong /media/Test
+
+![Mount](/Images/umount.png)
+
 # RAM
 
 Chi tiết thông số trong  ```/proc/meminfo```
@@ -257,18 +270,7 @@ Kịch bản thực hiện như sau: kiểm tra thuộc tính của các file b�
 - Vi/Vim: ```i```: insert, ```del```: delete, ```(ESC) + :wq```: save, ```(ESC) + :q!```: exit
 - nano: nhập xóa dữ liệu trực tiếp,  "Ctr+ X+Yes/No" : save /don't save and exit
 
-## Mount/Umount Partition
 
-```mount [options] <source> <directory>```
-
-Mount một ổ cứng nvme0n1p3 vào trong /media/Test
-![Mount](/Images/mount.png)
-
-```umount [-hV]```
-
-Umount ổ cứng nvme0n1p3 trong /media/Test
-
-![Mount](/Images/umount.png)
 
 
 
