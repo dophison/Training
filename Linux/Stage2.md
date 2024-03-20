@@ -297,11 +297,17 @@ Tương tự như một shortcut trong Windows, không dùng đến inode entry.
 Lệnh nén:
 ```tar -cvf [tên file sau nén] [thư mục/file cần nén]```
 ```tar -cvzf``` : dùng để tạo file ```tar.gz``` 
+```zip [tên file sau nén] [thư mục/file cần nén]````
 
 Lệnh giải nén:
 ```tar -xvf ```
+```unzip [tên file nén] -d destination_folder ``
 
 ![Compression](/Images/tar.png)
+
+![Compression](/Images/zip.png)
+
+
 
 
 
