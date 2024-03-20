@@ -331,8 +331,35 @@ Dưới hình sư dụng [option] là ``-c`` dùng để dừng gửi sau số l
 
 Hình ảnh mô tả thực hiện scan port từ 1 tới 1000, port 8888 và tất cả các port liệt kê trong /etc/services.
 
-![ToolNetwork](/Images/hping3.png)
+![ToolNetwork](/Images/hping3_scan.png)
 
+
+## SSH
+ssh với key, ssh với port custom, gen key ssh.
+
+Kịch bản là một máy X sẽ tạo ra pubkey như hình bằng ```ssh-keygen```.
+
+![ToolNetwork](/Images/sshkeygen.png)
+
+Server sẽ thêm public key vào trong ``authorized_keys``.
+![ToolNetwork](/Images/author.png)
+
+Máy X thông qua ssh có thể truy cập vào server.
+![ToolNetwork](/Images/ssh_pubkey.png)
+
+Tiếp tục thử với kịch bản là thay đổi port của ssh thành **123** và truy cập:
+
+Thay đổi trong file ``/etc/ssh/sshd_config``
+
+![ToolNetwork](/Images/change_port_ssh.png)
+
+Kiểm tra bằng lệnh ``systemctl status ssh``
+
+![ToolNetwork](/Images/status_after_change_port.png)
+
+Truy cập ``ssh username@IP -p 123``
+
+![ToolNetwork](/Images/ssh_newport.png)
 
 
 
