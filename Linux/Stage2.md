@@ -173,7 +173,7 @@ Với câu lệnh ```stress --cpu 2 --timeout 120```,  2 tiến trình được 
 
 Chi tiết thông số trong  ```/proc/meminfo```
 
-![Ram](/Images/meminfo.png)
+![Ram](/Images/meminfor.png)
 
 Trực quan và dễ hiểu thì dùng:
  
