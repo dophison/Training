@@ -169,6 +169,30 @@ Với câu lệnh ```stress --cpu 2 --timeout 120```,  2 tiến trình được 
 
 ![Stress](/Images/stress_evaluate.png)
 
+## RAM
+
+Chi tiết thông số trong  ```/proc/meminfo```
+
+![Ram](/Images/meminfo.png)
+
+Trực quan và dễ hiểu thì dùng:
+ 
+```free```
+
+![Ram](/Images/free.png)
+
+Trong đó: 
+
+- ram used : Đã sử dụng.
+- free :  Còn trống.
+- shared : Dung lượng dùng chung.
+- buff/cache : Dung lượng bộ nhớ sử dụng cho việc lưu đệm.
+- available : Dung lượng bộ nhớ khả dụng.
+
+> Có thể xác định đươc ram còn trống trong cột ```free``` hoặc ```available```. Ngoài ra, tổng số bộ nhớ có thể sử dụng sẽ bằng free + buff/cache.
+
+
+
 
 
 
