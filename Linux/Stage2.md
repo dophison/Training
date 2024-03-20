@@ -138,9 +138,11 @@ Và theo thời gian thực như:
 
 
 - load average : thời gian tải trung bình (the last 1 minute, the last 5 minutes, and the last 15 minutes)
-- zombie process : là những tiến trình tuy đã chấm dứt nhưng chưa xóa hoàn toàn trong bảng tiến trinh, đợi tiến trình cha cập nhật thông tin trạng thái. 
->```ps aux | egrep "Z|defunct"``` : tìm các tiến trình khả nghi khi dùng ```top``` thấy có tiến trình zombie xuất hiện .
+- zombie process : là những tiến trình tuy đã chấm dứt nhưng chưa xóa hoàn toàn trong bảng tiến trinh, đợi tiến trình cha cập nhật thông tin trạng thái.
+
+>```ps aux | egrep "Z|defunct"``` : tìm các tiến trình khả nghi khi dùng ```top``` thấy có tiến trình zombie xuất hiện.
 Tiêu diệt bằng cách:
+
      - Tìm ra tiến trình cha của tiến trình zombie :  ```ps -o ppid= -p  <pid>```
      - XáC định tiến trình cha có tồn tại hay không: ```ps -e | grep <ppid>```
      - ```kill -SIGKILL <ppid>```
@@ -156,6 +158,22 @@ Tiêu diệt bằng cách:
 - hi : Thời gian CPU sử dụng cho xử lý các ngắt phần cứng.
 - si : Thời gian CPU sử dụng cho xử lý các ngắt phần mềm.
 - st : Thời gian CPU liên quan đến phần ảo hóa.
+
+### Stress-testing the system’s CPU by _stress tool_
+
+Sau khi cài đặt: ```sudo apt install stress```
+
+```sudo stress option argument```
+
+Với câu lệnh ```stress --cpu 2 --timeout 120```,  2 tiến trình được tạo ra để tính toán liên tục hàm sqrt() của số bất kì.
+
+![Stress](/Images/stress_evaluate.png)
+
+
+
+
+
+
 
 
 
