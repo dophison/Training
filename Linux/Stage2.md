@@ -191,7 +191,13 @@ Trong đó:
 
 > Có thể xác định đươc ram còn trống trong cột ```free``` hoặc ```available```. Ngoài ra, tổng số bộ nhớ có thể sử dụng sẽ bằng free + buff/cache.
 
+## Process Manager
 
+Kich bản sử dụng là sẽ có một tiến trình stress chạy và dùng ```ps ``` để kiểm tra sau đó sẽ xác định pid và ```kill``` tiến trình đó.
+
+![Process](/Images/ps_e.png)
+
+![Process](/Images/kill.png)
 
 
 
