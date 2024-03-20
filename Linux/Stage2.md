@@ -222,6 +222,34 @@ Tìm kiếm, copy, di chuyển,... file/thư mục
 ![WorkDF](/Images/mv.png)
 
 
+## Permission
+
+```chmod```: dùng đê cấp quyền cho file, thư mục, bao gồm các quyền như read, write, execute 
+```chmod [OPTION]... OCTAL-MODE FILE...```
+
+![Permit](/Images/chmod.png)
+
+```chown```: dùng thay đổi sở hữu file, thư mục .
+```chown [OPTION]... [OWNER][:[GROUP]] FILE...```
+
+![Permit](/Images/chown.png)
+
+chattr (Change Attribute) cho phép thay đổi thuộc tính của file giúp bảo vệ file khỏi bị xóa hoặc ghi đè nội dung, dù cho có đang là user root.
+```chattr [operator] [flags] [filename]```
+[_operator_] gồm:
+- +: Thêm thuộc tính cho file.
+- -: Gỡ bỏ thuộc tính khỏi file.
+- =: Giữ nguyên thuộc tính của file.
+[_flags_] gồm:
+- ```i```: Flag này khiến file không thể rename, không thể tạo symlink, không thể thực thi, không thể write. Chỉ có user root mới set và unset được thuộc tính này.
+- ```a```: Tương tự như flag ```i``` nhưng có quyèn write.
+- ```d```: file có thuộc tính này sẽ không được backup khi tiến trình dump chạy.
+- ```S```: Nếu một file có thuộc tính này bị sửa, thay đổi sẽ được cập nhật đồng bộ trên ổ cứng.
+- ```A```: Khi file có thuộc tính được truy cập, giá trị atime của file sẽ không thay đổi.
+
+Kịch bản thực hiện như sau: kiểm tra thuộc tính của các file bằng ```lsatrr``` sau đó đặt thuộc tính ```i``` cho file và thử xóa file đã đặt thuộc tính.
+
+![Permit](/Images/chattr.png)
 
 
 
