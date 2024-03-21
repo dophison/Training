@@ -439,6 +439,91 @@ Các tham số thường dùng:
 Dùng để in văn bản (sử dụng ``lpr``)
 
 ``lpr <file name>``
+
 ``lpr -P <printer name> <file name>``  
+
+# Working with contents
+
+## sort
+
+``sort [OPTION]... [FILE]...``
+
+Mặc định sẽ là sắp xếp tăng dần/abc vói  option ``-r `` thì sẽ cho kết quả ngược lại.
+
+![sort](/Images/sort.png)
+
+## uniq
+
+Thường dùng để xử lý danh sách, mặc định là dùng đê loại bỏ các dòng trùng lặp liền kề trong một file.
+
+``uniq [OPTIONS] [INPUT_FILE [OUTPUT_FILE]]``
+
+Với [OPTIONS] có thể là 
+- ``c`` : đếm số dòng trùng lặp.
+- ``d`` : chỉ in ra dòng có sư trùng lặp.
+- ``D`` : in ra tất cả sự lặp lại.
+- ``u`` : in ra các dòng duy nhất.
+
+![uniq](/Images/uniq.png)
+
+## wc (word count)
+
+Dùng cho mục đich đếm.
+
+``wc [OPTION]... [FILE]...``
+
+Kết quả ```9 9 27``` là: 9 dòng; 9 từ, 27 kí tự
+
+![wc](/Images/wc.png)
+
+## cut
+
+Dùng đê lấy ra dũ liệu từ một file.
+
+``cut OPTION... [FILE]...``
+
+Với [OPTIONS] có thể là 
+- ``b`` : Cát theo vị trí byte.
+- ``C`` : Cát theo vị trí kí tự.
+- ``f`` : trích xuất theo một trường cụ thể.
+- 
+![cut](/Images/cut.png)
+
+
+## join
+
+Nối giữa hai tẹp với nhau  trong một môi truòng chung.
+
+``join [OPTION] FILE1 FILE2``
+
+# Tìm kiểu các khái niệm cơ bản
+
+## Standard Input (stdin):
+
+Là nơi nhận dữ liệu từ người dùng (bàn phím). 
+
+## Standard Output (stdout):
+
+Là nơi chương trình hiển thị kết quả ra màn hình. 
+
+## Standard Error (stderr):
+
+Là nơi chương trình thông báo lỗi.
+
+## Redirect error to a file
+
+![Redirect](/Images/redirect_error.png)
+
+## Redirect output messages to a file
+
+![Redirect](/Images/redirect_output.png)
+
+## Redirect error and output messages to a file
+
+![Redirect](/Images/redirect_both.png)
+
+
+
+
 
 
