@@ -1,3 +1,6 @@
+
+#Table of content
+
 1. [Tìm kiếm một file, directory](#tìm-kiếm-một-file-directory)
 
     [Với tên hoặc bằng extension (ví dụ .jpg)](#với-tên-hoặc-bằng-extension-ví-dụ-jpg)
@@ -82,7 +85,7 @@ find /home/dophison/Pictures/ -name *.jpg
 ```
 ![FindCommand](/Images/findname_ext.png)
 
-## Với giá trị -maxdepth, -mindepth 
+## Với giá trị -maxdepth, -mindepth
 (mục đích không muốn tìm quá sâu/tất cả bên trong thư mục)
 
 ```find ~ -maxdepth levels``` (với ý nghĩa là số lượng cấp tối đa (levels) tìm trong các thư mục con) 
