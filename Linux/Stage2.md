@@ -13,6 +13,62 @@
         
     [df (disk filesystem) & du (disk usage)](#df-disk-filesystem--du-disk-usage)
     
+[CPU](#cpu)
+
+[Stress-testing the system’s CPU by stress tool](#stress-testing-the-systems-cpu-by-stress-tool)
+
+3. [RAM](#ram)
+
+4. [Process Manager](#process-manager)
+
+5. [Permission](#permission)
+
+6. [Editor](#editor)
+
+7. [Symbolic Links, Hard Links](#symbolic-links-hard-links)
+
+8. [Compression](#compression)
+
+9. [#NetworkTool](##networktool)
+
+[Telnet](#telnet)
+
+[ping](#ping)
+
+[hping3](#hping3)
+
+[SSH](#ssh)
+
+[scp](#scp)
+
+[rsync](#rsync)
+
+10. [Working with file](#working-with-file)
+11. [Traceroute](#traceroute)
+12. [Netstat](#netstat)
+13. [Print](#print)
+
+
+14. [Working with contents](#working-with-contents)
+
+[sort](#sort)
+
+[uniq](#uniq)
+
+[wc](#wc)
+
+[cut](#cut)
+
+[join](#join)
+
+15. [Tìm kiểu các khái niệm cơ bản](#tìm-kiểu-các-khái-niệm-cơ-bản)
+
+[Standard Input (stdin)](#standard-input-stdin)
+
+[Standard Output (stdout)](#standard-output-stdout)
+
+[Standard Error (stderr)](#standard-error-stderr)    
+    
     
 # Tìm kiếm một file, directory
 
@@ -315,6 +371,8 @@ Lệnh giải nén:
 
 ![Compression](/Images/zip.png)
 
+
+#NetworkTool
 
 ## Telnet
 Giao tiếp với máy chủ khác bằng giao thức Telnet.
