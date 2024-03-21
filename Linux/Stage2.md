@@ -381,4 +381,36 @@ Thực hiện việc đồng bộ từ máy local lên máy VPS thông qua  ```r
 ![ToolNetwork](/Images/rsync_ssh.png)
 
 
+# Working with file
+
+### Xem nhanh nội dung của file.
+
+```cat <tên file>```
+![Workwithfile](/Images/cat.png)
+
+### Chèn một đoạn text vào cuối file.
+
+``echo "nội dung mới" >> <file cần chèn>``
+
+![Workwithfile](/Images/insertfile.png)
+
+### Show 2 dòng đầu file.
+``head [OPTION]... [FILE]...``
+
+![Workwithfile](/Images/head.png)
+
+### Show 2 dòng cuối file.
+
+``tail [OPTION]... [FILE]...``
+
+![Workwithfile](/Images/tail.png)
+
+### Dùng sed command để find and replace một trong string trong file text.
+
+``sed OPTIONS... [SCRIPT] [INPUTFILE...] ``
+
+![Workwithfile](/Images/sed.png)
+
+
+
 
