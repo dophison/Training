@@ -1,3 +1,13 @@
+[Tìm kiếm một file, directory](#tìm-kiếm-một-file-directory)
+    [Với tên hoặc bằng extension (ví dụ .jpg)](#với-tên-hoặc-bằng-extension-ví-dụ-jpg)
+    [Với giá trị -maxdepth, -mindepth](#với-giá-trị--maxdepth--mindepth)
+    [Với giá trị -mtime](#với-giá-trị--mtime)
+[Disk and Partition](#disk-and-partition)
+    [Xem dung lượng disk](#xem-dung-lượng-disk)
+        [lsblk](#lsblk)
+        [df (disk filesystem) & du (disk usage)](#df-disk-filesystem--du-disk-usage)
+
+
 # Tìm kiếm một file, directory
 
 ``` find [path] [options] [expression] ``` : dạng lệnh tìm kiếm tổng quát
@@ -28,14 +38,6 @@ find /home/dophison/Pictures/ -name *.jpg -maxdepth 2
 ![FindCommand](/Images/findmaxmindepth.png)
 
 ## Với giá trị -mtime
-
-```-mtime n``` là dùng để tìm file được chỉnh sửa (modification) trong vòng n ngày.
-_(1 file có 3 yếu tố thời gian access time, modification time, change time)_
-- +n: more than n.
--  n: Exactly n.
-- -n: Less than n.
-
-## Với tham số -mtime
 
 ```-mtime n``` là dùng để tìm file được chỉnh sửa (modification) trong vòng n ngày.
 _(1 file có 3 yếu tố thời gian access time, modification time, change time)_
@@ -520,7 +522,7 @@ Là nơi chương trình thông báo lỗi.
 
 ## Redirect error and output messages to a file
 
-![Redirect](/Images/redirect_both.png)
+![Redirect](/Images/redirectboth.png)
 
 
 
