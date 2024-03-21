@@ -1,20 +1,19 @@
-[Tìm kiếm một file, directory](#tìm-kiếm-một-file-directory)
-    
+1. [Tìm kiếm một file, directory](#tìm-kiếm-một-file-directory)
+
     [Với tên hoặc bằng extension (ví dụ .jpg)](#với-tên-hoặc-bằng-extension-ví-dụ-jpg)
     
     [Với giá trị -maxdepth, -mindepth](#với-giá-trị--maxdepth--mindepth)
     
     [Với giá trị -mtime](#với-giá-trị--mtime)
+2. [Disk and Partition](#disk-and-partition)
     
-[Disk and Partition](#disk-and-partition)
-
     [Xem dung lượng disk](#xem-dung-lượng-disk)
-    
-        [lsblk](#lsblk)
         
-        [df (disk filesystem) & du (disk usage)](#df-disk-filesystem--du-disk-usage)
-
-
+    [lsblk](#lsblk)
+        
+    [df (disk filesystem) & du (disk usage)](#df-disk-filesystem--du-disk-usage)
+    
+    
 # Tìm kiếm một file, directory
 
 ``` find [path] [options] [expression] ``` : dạng lệnh tìm kiếm tổng quát
