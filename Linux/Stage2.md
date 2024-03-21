@@ -13,9 +13,9 @@
         
     [df (disk filesystem) & du (disk usage)](#df-disk-filesystem--du-disk-usage)
     
-[CPU](#cpu)
+    [CPU](#cpu)
 
-[Stress-testing the system’s CPU by stress tool](#stress-testing-the-systems-cpu-by-stress-tool)
+    [Stress-testing the system’s CPU by stress tool](#stress-testing-the-systems-cpu-by-stress-tool)
 
 3. [RAM](#ram)
 
@@ -29,19 +29,19 @@
 
 8. [Compression](#compression)
 
-9. [#NetworkTool](##networktool)
+9. [NetworkTool](##networktool)
 
-[Telnet](#telnet)
+   [Telnet](#telnet)
 
-[ping](#ping)
+   [ping](#ping)
 
-[hping3](#hping3)
+   [hping3](#hping3)
 
-[SSH](#ssh)
+   [SSH](#ssh)
 
-[scp](#scp)
+   [scp](#scp)
 
-[rsync](#rsync)
+   [rsync](#rsync)
 
 10. [Working with file](#working-with-file)
 11. [Traceroute](#traceroute)
@@ -51,23 +51,23 @@
 
 14. [Working with contents](#working-with-contents)
 
-[sort](#sort)
+    [sort](#sort)
 
-[uniq](#uniq)
+    [uniq](#uniq)
 
-[wc](#wc)
+    [wc](#wc)
 
-[cut](#cut)
+    [cut](#cut)
 
-[join](#join)
+    [join](#join)
 
 15. [Tìm kiểu các khái niệm cơ bản](#tìm-kiểu-các-khái-niệm-cơ-bản)
 
-[Standard Input (stdin)](#standard-input-stdin)
+    [Standard Input (stdin)](#standard-input-stdin)
 
-[Standard Output (stdout)](#standard-output-stdout)
+    [Standard Output (stdout)](#standard-output-stdout)
 
-[Standard Error (stderr)](#standard-error-stderr)    
+    [Standard Error (stderr)](#standard-error-stderr)    
     
     
 # Tìm kiếm một file, directory
