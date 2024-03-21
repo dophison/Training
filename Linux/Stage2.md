@@ -411,6 +411,34 @@ Thực hiện việc đồng bộ từ máy local lên máy VPS thông qua  ```r
 
 ![Workwithfile](/Images/sed.png)
 
+# Traceroute
+Dùng traceroute để trace từ máy remote đến ip 103.200.22.11 và nêu ra quá trình đó cần đi qua các hop nào.
+Dựa vào kết quả  như hình , có thể thấy được 
+- Hop 1: static.vnpt.vn (14.225.198.254) qua gateway/router VNPT 
+- Hop 2: Đích đến cuôi cùng.
 
+![Traceroute](/Images/traceroute.png)
+
+
+# Netstat (network statistic)
+
+Hiển thị thông tin liên quan đến mạng và chẩn đoán sự cố.
+
+``netstat [options]``
+
+Các tham số thường dùng:
+- a : hiển thị tất cả các cổng đang lắng nghe và không.
+- t : hiển thị các kết nối liên quan đến TCP.
+- u : hiển thị các kết nối liên quan đến UDP.
+- l : chỉ hiện các cổng đang nghe.
+
+![Netstat](/Images/netstat.png)
+
+# Print
+
+Dùng để in văn bản (sử dụng ``lpr``)
+
+``lpr <file name>``
+``lpr -P <printer name> <file name>``  
 
 
