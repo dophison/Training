@@ -1,6 +1,7 @@
 # Table of content
 Cài đặt Windows Server 2012 + SQL Server 2012. Sau khi cài đặt xong có thể login vào bằng user sa. Sau đó reset pass user sa, reset pass windows bằng kali linux (dùng chntpw).
 
+
 1. [Install SQL Server](#install-sql-server)
 2. [Using chntpw](#using-chntpw)
 
@@ -27,7 +28,7 @@ Thay đổi mật khẩu của user sa trong _Security_ -> _Logins_ -> (right cl
 
 Trên VMware Workstation, thêm vào 1 CD/DVD với iso của kali 
 
-![chntpw](/Images/WinServer/kali_boot.jpg)
+![chntpw](/Images/WinServer/kali_boot.png)
 
 > Vào boot chỉnh priority boot là kali để vào
 
@@ -46,6 +47,13 @@ Lựa chọn các tùy chọn thích hợp
 Sau đó restart vào lại Window Server, kết quả là tự động đăng nhập vào Administrator không cần mật khẩu
 
 ![chntpw](/Images/WinServer/chntpw_result.png)
+
+
+
+
+
+
+
 
 
 
