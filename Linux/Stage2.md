@@ -32,7 +32,8 @@
 
 8. [Compression](#compression)
 
-9. [NetworkTool](##networktool)
+9. [NetworkTool](#network-tool)
+
 
    [Telnet](#telnet)
 
@@ -42,7 +43,8 @@
 
    [SSH](#ssh)
 
-   [scp](#scp)
+   [scp](#scp)laravel-laravel-087543a/
+
 
    [rsync](#rsync)
 
@@ -375,7 +377,7 @@ Lệnh giải nén:
 ![Compression](/Images/zip.png)
 
 
-#NetworkTool
+# Network Tool
 
 ## Telnet
 Giao tiếp với máy chủ khác bằng giao thức Telnet.

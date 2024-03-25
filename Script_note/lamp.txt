@@ -1,0 +1,36 @@
+sudo apt install mysql-server
+
+edit 
+sudo nano /etc/apache2/mods-enabled/dir.conf
+(chuyển index.php lên đầu)
+(trong /var/www/html/ tạo php.index)
+hoặc đổi đường dẫn trong /etc/apache2/sites-available
+
+''DocumentRoot /var/www/php''
+
+
+sudo apt install php-cli
+
+
+ps aux | grep 
+
+netstat -plant
+
+
+sudo a2ensite laravel.conf
+
+sudo a2dissite < >
+
+sudo timeshift --create --comments "A new backup"
+
+composer global require laravel/installer
+composer global about
+
+
+
+https://www.hostinger.com/tutorials/how-to-install-laravel-on-ubuntu
+
+
+https://ubuntu.com/tutorials/install-and-configure-wordpress#4-configure-apache-for-wordpress
+
+
