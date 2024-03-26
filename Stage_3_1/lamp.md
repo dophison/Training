@@ -13,12 +13,9 @@
 # Cài đặt mô hình LAMP 
 
 > Linux : máy cá nhân (được cài Ubuntu 22.04.4 LTS)
-
-Apache
-
-MySQL
-
-PHP
+>Apache
+>MySQL
+>PHP
  
 
 ``apt install lamp-server^``
@@ -87,8 +84,7 @@ Sử dụng apache trỏ đường dân vào một file php bất kì khác vớ
 
 > Luôn nhớ cài đặt các dependencies
 laravel : ``php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip php-bcmath php-tokenizer php-json php-pear``
-
-wordpress: ``apache2 \
+>wordpress: ``apache2 \
                  ghostscript \
                  libapache2-mod-php \
                  mysql-server \
@@ -121,12 +117,9 @@ Nội dung của file ``laravel.conf`` và ``wordpress.conf``
 
 > Lưu ý nên cài Composer để thiết lập Laravel dễ dàng hơn 
 ``curl -sS https://getcomposer.org/installer | php``
-
-Cài đặt Laravel bằng ``composer create-project --prefer-dist laravel/laravel example`` trong ``/var/www/``
-
-Câp quyền ``chmod`` và ``chown`` cho phù hợp đê ``www-data`` có thể truy câp đến.
-
-Trong ``/var/www/example`` chạy ``composer install`` để hoàn tất thiết lập các package cần thiết (xuất hiện thư mục ``vendor``)
+>Cài đặt Laravel bằng ``composer create-project --prefer-dist laravel/laravel example`` trong ``/var/www/``
+>Câp quyền ``chmod`` và ``chown`` cho phù hợp đê ``www-data`` có thể truy câp đến.
+>Trong ``/var/www/example`` chạy ``composer install`` để hoàn tất thiết lập các package cần thiết (xuất hiện thư mục ``vendor``)
 
 Dùng ``a2ensite lavarel.conf`` | ``a2ensite wordpress.conf`` và ``a2enmod rewrite`` để kích hoạt virtual host. Kiểm tra trong thư mục ``/etc/apache2/sites_enablé``
 
