@@ -5,7 +5,7 @@
 1. [Cài đặt mô hình LAMP](#cai-dat-mo-hinh-lamp)
 2. [Config vhost](#config-vhost)
 3. [HAProxy](#cau-hinh-haproxy-thay-cho-Nginx)
-3. [Iptablles](#iptable)
+3. [Iptables](#iptable)
 
 
 
