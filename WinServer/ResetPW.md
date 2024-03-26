@@ -3,7 +3,7 @@ Cài đặt Windows Server 2012 + SQL Server 2012. Sau khi cài đặt xong có 
 
 
 1. [Install SQL Server](#install-sql-server)
-2. [Using chntpw](#using-chntpw)
+2. [Using chntpw](#using-chntpw-kali-linux)
 
 # Install SQL Server
 
