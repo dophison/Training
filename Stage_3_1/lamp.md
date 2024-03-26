@@ -158,9 +158,99 @@ Thay đổi password ở chỗ này
 
 ## Stage 3.1
 
-Bên máy VPS 
+Đồng thời cài đặt Nginx trên VPS
 
-![VPS](/Images/Stage3_1/nginx_ok_vps.png)
+![VPS](/Images/Stage3_1/nginx_status.png)
+
+
+> Nginx sẽ chạy ở  port 80, apache sẽ chạy ở port 8080 với 2 dịch vụ là larevel và wordpress như trên
+
+
+Cấu hình file ``default`` trong ``/etc/nginx/sites-available`` 
+
+
+
+![VPS](/Images/Stage3_1/config_rproxy.png)
+
+
+Sau đó test thử bằng cách tắt Apache truy cập website báo lỗi ``502 bad gateway`` là đươc.
+
+Tạo một bộ cert ssl (pem + private key) bằng openssl
+
+
+![SSL](/Images/Stage3_1/create_ssl.png)
+
+
+![SSL](/Images/Stage3_1/certificate.png)
+
+Thêm vào file virutal host của lavarel
+
+![SSL](/Images/Stage3_1/ssl_content.png)
+
+![SSL](/Images/Stage3_1/https.png)
+
+Tương tự với nginx với cấu hình như sau 
+
+![SSL](/Images/Stage3_1/nginx_ssl.png)
+
+### Cấu hình haproxy thay cho Nginx
+
+ haproxy listen 2 port 80 và 443
+
+
+> HAProxy (High Availability Proxy) là một công cụ mã nguồn mở ứng dụng cho giải pháp cần bằng tải TCP và HTTP.
+
+Cài đặt và kiểm tra trạng thái và log của HAProxy
+
+Log: ``haproxy -f /etc/haproxy/haproxy.cfg -db``
+
+![HAProxy](/Images/Stage3_1/status_haproxy.png)
+
+Cấu hình trong ``/etc/haproxy/haproxy.cfg``
+
+![HAProxy](/Images/Stage3_1/stat_haproxy.png)
+
+
+![HAProxy](/Images/Stage3_1/haproxy_statistic.png)
+
+
+Vì một vài xung đột nên thay đôi haproxy lắng nghe trên port 8081 và 4433 
+
+
+Đây là cấu hình thêm vào trong file haproxy.cfg
+
+![HAProxy](/Images/Stage3_1/config_haproxy.png)
+
+> 14.225.217.222:80 đang có dịch vụ wordpress
+14.225.217.222:443 đang chạy dịch vụ laravel
+
+
+![HAProxy](/Images/Stage3_1/result_haproxy.png)
+
+
+
+### Iptables
+
+Dùng iptables drop port 80 của vps lab nhưng theo src ip.
+Dùng iptables drop port 80 của vps lab nhưng theo dest ip (có thể add thêm 1 ip nữa vào server để test. Dùng command sau: ip addr add 192.168.0.83/24 dev ens16)
+Dùng iptables nat traffic vào port 80 của ip vps lab sẽ được foward sang ip 192.168.0.83
+
+
+Dùng iptables drop port 80 của vps lab
+
+``iptables -A INPUT -p tcp --dport 80 -j DROP``
+
+Trong đó: 
+- -A: CHAIN (INPUT; OUTPUT, FORWSARD, PREPROUTING, POSTROUTING)
+- -p: xác định giao thức (tcp, udp, icmp,..) 
+- ---dport: Định nghĩa cổng đích (80: http)
+- -j: Xác định hành động sẽ làm (DROP, ACCEPT,..)
+
+
+``iptables -A INPUT -p tcp --dport 80 -j DROP``
+
+
+
 
 
 
