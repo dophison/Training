@@ -1,20 +1,14 @@
 
 # Table of contents
 
-Cài đặt mô hình lamp.
-Thực hiện reset pass mysql, mở remote mysql ở port 3306.
-
-
-Cài đặt source laravel và wordpress với 2 vhost như sau:
-
-Vhost: laravel.vietnix.vn -> trỏ về source laravel 
-Vhost: wordpress.vietnix.vn -> trỏ về source wordpress
-
-Sau đó từ máy remote truy cập vào 2 domain này nếu load đúng giao diện là thành công.
-Thực hiện reset pass user admin (hoặc bất kì user nào bạn tạo lúc cài đặt wordpress).
 
 1. [Cài đặt mô hình LAMP](#cai-dat-mo-hinh-lamp)
 2. [Config vhost](#config-vhost)
+3. [HAProxy](#cau-hinh-haproxy-thay-cho-Nginx)
+3. [Iptablles](#iptable)
+
+
+
 
 # Cài đặt mô hình LAMP 
 
@@ -195,12 +189,10 @@ Tương tự với nginx với cấu hình như sau
 
 ### Cấu hình haproxy thay cho Nginx
 
- haproxy listen 2 port 80 và 443
-
 
 > HAProxy (High Availability Proxy) là một công cụ mã nguồn mở ứng dụng cho giải pháp cần bằng tải TCP và HTTP.
 
-Cài đặt và kiểm tra trạng thái và log của HAProxy
+Cài đặt và kiểm tra trạng thái và log của HAProxy.
 
 Log: ``haproxy -f /etc/haproxy/haproxy.cfg -db``
 
@@ -214,7 +206,7 @@ Cấu hình trong ``/etc/haproxy/haproxy.cfg``
 ![HAProxy](/Images/Stage3_1/haproxy_statistic.png)
 
 
-Vì một vài xung đột nên thay đôi haproxy lắng nghe trên port 8081 và 4433 
+Vì một vài xung đột nên thay đôi haproxy lắng nghe trên port 8081 và 4433.
 
 
 Đây là cấu hình thêm vào trong file haproxy.cfg
@@ -231,12 +223,10 @@ Vì một vài xung đột nên thay đôi haproxy lắng nghe trên port 8081 v
 
 ### Iptables
 
-Dùng iptables drop port 80 của vps lab nhưng theo src ip.
-Dùng iptables drop port 80 của vps lab nhưng theo dest ip (có thể add thêm 1 ip nữa vào server để test. Dùng command sau: ip addr add 192.168.0.83/24 dev ens16)
-Dùng iptables nat traffic vào port 80 của ip vps lab sẽ được foward sang ip 192.168.0.83
 
 
-Dùng iptables drop port 80 của vps lab
+
+_Dùng iptables drop port 80 của vps lab._
 
 ``iptables -A INPUT -p tcp --dport 80 -j DROP``
 
@@ -246,14 +236,43 @@ Trong đó:
 - ---dport: Định nghĩa cổng đích (80: http)
 - -j: Xác định hành động sẽ làm (DROP, ACCEPT,..)
 
+>Mặc dù server vps vẫn đang host dịch vụ wordpress ở cổng 80 nhưng sau khi áp dụng rule iptables thì không truy cập được vào từ máy remote nữa.
 
-``iptables -A INPUT -p tcp --dport 80 -j DROP``
-
-
-
+![iptables](/Images/Stage3_1/drop_80.png)
 
 
 
+_Dùng iptables drop port 80 của vps lab nhưng theo src ip._
+
+Chỉ cần thêm tham số  ``-s`` cùng với địa chỉ IP.
+
+
+``iptables -A INPUT -p tcp --dport 80 -s 115.78.5.187 -j DROP``
+
+
+![iptables](/Images/Stage3_1/drop_from_src.png)
+
+> Với rule này ở máy remote bật VPN thì mới truy cập vào được.
+![iptables](/Images/Stage3_1/access_vpn.png)
+
+_Dùng iptables drop port 80 của vps lab nhưng theo dest ip._
+
+Chỉ cần thêm tham số  ``-d`` cùng với địa chỉ IP.
+
+``iptables -A INPUT -p tcp --dport 80 -d <IP> -j DROP``
 
 
 
+
+_Dùng iptables nat traffic vào port 80 của ip vps lab sẽ được foward sang ip 192.168.0.83_
+
+> Thêm vào forward sang ip 192.168.0.83 với port 3306 (mysql)
+
+``iptables -t nat -A PREROUTING -p tcp --dport 80 -d 14.225.217.222 -j DNAT --to-destination 192.168.0.83:3306``
+
+
+![iptables](/Images/Stage3_1/add_rule_prerouting.png)
+
+Sau đó dùng máy remote truy cập vào trong 14.225.217.222:80. Và kiểm tra log của mysql thì thấy có ghi lại lần truy cập => rule đã chuyển tiếp.
+
+![iptables](/Images/Stage3_1/logmysql.png)
