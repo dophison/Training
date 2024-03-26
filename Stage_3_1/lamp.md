@@ -13,9 +13,10 @@
 # Cài đặt mô hình LAMP 
 
 > Linux : máy cá nhân (được cài Ubuntu 22.04.4 LTS)
-  Apache
-  MySQL
-  PHP
+> Apache
+> MySQL
+> PhP
+  
  
 
 ``apt install lamp-server^``
