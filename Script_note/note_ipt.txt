@@ -1,0 +1,4 @@
+script nhớ check version của nginx (vì có sự xung đột giữa hai verison từ source và từ apt install)
+Có thể xử lý là gỡ toàn bộ nginx trên máy 
+(sudo service nginx stop
+sudo rm -rf /etc/nginx /etc/default/nginx /usr/sbin/nginx* /usr/local/nginx /var/run/nginx.pid /var/log/nginx)
