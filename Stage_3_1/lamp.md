@@ -318,14 +318,21 @@ Sau đó dùng máy remote truy cập vào trong 14.225.217.222:80. Và kiểm t
 
 - Phần mô hình LAMP nhờ em bổ sung nhiệm vụ của apache và nginx khi được cấu hình với mô hình như vậy.
 
-Với nginx đươc cấu hình như trên thì sẽ có nhiệm vụ là xử lý các yêu cầu được gửi đên server name ``laravel.vietnix.vn`` và ``wordpress.vietnix.vn`` với apache được cấu hình vhost cho hai server name đó. 
+Với nginx đươc cấu hình như trên sẽ có nhiệm vụ là xử lý các yêu cầu được gửi đên server name ``laravel.vietnix.vn`` và ``wordpress.vietnix.vn`` với apache được cấu hình vhost cho hai server name đó lấy source và load lên. 
 
 ![VPS](/Images/Stage3_1/config_rproxy.png)
 
 
-
-
-
-
 - Phần iptables em tìm hiểu thêm giúp a chain -I  và khi nào sử dụng chain -A còn khi nào -I .
+
+>Cơ bản như sau:
+
+>-A chain: Sẽ thêm rule vào sau cùng của chain đó. 
+
+>-I chain [rulenum]: Thêm rule vào trong chain ở một vị trí chỉ định.
+
+Các chain (INPUT; OUTPUT; FORWARD; PREPROUTING; POSTROUTING) iptables thực hiện rule theo thứ tự ưu tiên **từ trên xuống (đặc trưng bởi rulenum)** -> sử dụng -A chain rules sẽ là ưu tiên thấp nhất. Việc dùng linh hoạt giữa tham số -A và -I sẽ giúp kiểm soát các rule trong chain tránh bị xung đột cũng như bị vô hiệu hóa. 
+
+
+
 
