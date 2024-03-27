@@ -40,9 +40,18 @@ Thực hiện mount ổ của Window và đến đường dẫn chứa file SAM
 
 ![chntpw](/Images/WinServer/chntpw_1.png)
 
-Lựa chọn các tùy chọn thích hợp 
+Hiển thị Menu tương tác với các lựa chọn, mục đích là dùng để reset password nên chọn 1
 
-![chntpw](/Images/WinServer/chntpw_2.png)
+Sau đó kiểm tra user đã hoạt động chưa ở cột Lock? và ``enter user number (RID)``
+
+![chntpw](/Images/WinServer/chntpw_1.png)
+
+![chntpw](/Images/WinServer/chntpw_user.png)
+
+
+Chọn ``Clear (blank) user password`` xóa password của user. 
+> Trường hợp user bị lock thì có thể chọn 4 đê mở khóa và kích hoạt user.
+
 
 Sau đó restart vào lại Window Server, kết quả là tự động đăng nhập vào Administrator không cần mật khẩu
 
