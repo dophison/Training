@@ -79,13 +79,6 @@ Kiểm tra thông tin lắng nghe bằng ``netstat -plant``
 
 Ở máy remote dùng
 
-``mysql -u username -p -h remote_host``
-
-Với username phải đảm bảo có quyền truy cập
-
-> Sử dụng lệnh GRANT ALL PRIVILEGES
-ON * . * TO 'user'@'%'; #hoặc 'user'@'14.225.198.15'
-
 
 ![sqlremote](/Images/Stage3_1/user_son.png)
 
