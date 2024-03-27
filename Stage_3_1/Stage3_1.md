@@ -6,7 +6,7 @@
 2. [Config vhost](#config-vhost)
 3. [HAProxy](#cau-hinh-haproxy-thay-cho-Nginx)
 3. [Iptablles](#iptable)
-4. [Bổ sung](#bo-sung)
+4. [Bổ sung](#bổ-sung)
 
 
 
