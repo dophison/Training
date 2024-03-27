@@ -54,6 +54,8 @@ Mar 26 00:55:59 son systemd[1]: haproxy.service: Failed with result 'exit-code'.
 Mar 26 00:55:59 son systemd[1]: Failed to start HAProxy Load Balancer.
 
 
+iptables -t nat -L -n -v
+
 haproxy -f /path/TO/haproxyconfig -db
 Sau khi sudo systemctl restart haproxy cần thực hiện như thế nào mới chứng mình là haproxy đã là một reverse proxy 
 
