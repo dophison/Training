@@ -59,3 +59,159 @@ iptables -t nat -L -n -v
 haproxy -f /path/TO/haproxyconfig -db
 Sau khi sudo systemctl restart haproxy cần thực hiện như thế nào mới chứng mình là haproxy đã là một reverse proxy 
 
+
+
+nginx
+apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
+
+
+
+
+ ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
+
+
+
+
+./config --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module --add-dynamic-module=/root/testcookie-nginx-module
+
+
+
+ ls
+  680  mkdir nginx_source
+  681  cd nginx_source/
+  682  wget http://nginx.org/download/nginx-1.22.1.tar.gz 
+  683  ls
+  684  cd nginx-1.22.1.tar.gz 
+  685  tar -xvf nginx-1.22.1.tar.gz 
+  686  ls
+  687  cd nginx-1.22.1
+  688  ls
+  689  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
+  690  apt-get install libpcre3 libpcre3-dev
+  691  clear
+  692  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
+  693  apt-get install libssl-dev
+  694  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
+  695  clear
+  696  apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
+  697  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
+  698  make install
+  699  apt install pcre-devel
+  700  clear
+  701  make
+  702  apt install make
+  703  apt install gcc zlib-devel openssl-devel make pcre-devel libxml2-devel libxslt-devel libgcrypt-devel gd-devel perl-ExtUtils-Embed GeoIP-devel   
+  704  clear
+  705  make
+  706  make install
+  707  cd ..
+  708  cd /etc/nginx/
+  709  ls
+  710  systemctl start nginx
+  711  nano nginx.conf
+  712  systemctl status apache2
+  713  systemctl stop apache2
+  714  clear
+  715  systemctl start nginx
+  716  cd /lib/systemd/system/
+  717  ls
+  718  clear
+  719  grep "nginx"
+  720  clear
+  721  find . -name "ngin"
+  722  ls
+  723  clear
+  724  find . -name "nginx.*"
+  725  ls | grep "nginx"
+  726  cd ..
+  727  cd /etc/nginx/
+  728  ls
+  729  cd logs/
+  730  ls
+  731  apt install nginx
+  732  cd ..
+  733  ls
+  734  nano nginx.conf
+  735  vi /lib/systemd/system/nginx.service 
+  736  systemctl start nginx
+  737  vi /lib/systemd/system/nginx.service 
+  738  systemctl start nginx
+  739  systemctl daemon-reload
+  740  systemctl start nginx
+  741  cd ~
+  742  ls
+  743  cd /home/
+  744  ls
+  745  cd dophison/
+  746  ls
+  747  cd nginx_source/
+  748  ls
+  749  mkdir nginx-module
+  750  ls
+  751  cd nginx-
+  752  cd nginx-module/
+  753  git clone https://github.com/kyprizel/testcookie-nginx-module.git
+  754  ls
+  755  cd testcookie-nginx-module/
+  756  ls
+  757  pwd
+  758  ls
+  759  groupadd -r nginx
+  760  useradd -r s /sbin/nologin -d /dev/null -g nginx
+  761  useradd -r -s /sbin/nologin -d /dev/null -g nginx
+  762  useradd -r -s /sbin/nologin -d /dev/null -g nginx nginx
+  763  systemctl start
+  764  systemctl start nginx
+  765  clear
+  766  cd ..
+  767  ls
+  768  cd nginx-1.22.1
+  769  ls
+  770  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module --add-dynamic-module=/home/dophison/nginx_source/nginx-module/testcookie-nginx-module
+  771  make modules
+  772  cd /etc/nginx/
+  773  ls
+  774  nano nginx.conf
+  775  mkdir modules
+  776  ls
+  777  cd ..
+  778  cd /home/
+  779  ls
+  780  cd dophison/
+  781  ls
+  782  cd nginx_source/
+  783  ls
+  784  cd nginx-
+  785  cd nginx-module/
+  786  ls
+  787  cd testcookie-nginx-module/
+  788  ls
+  789  cd ..
+  790  cd nginx_source/
+  791  ls
+  792  cd nginx-1.22.1
+  793  ls
+  794  cd objs/
+  795  ls
+  796  cp ngx_http_testcookie_access_module.so /etc/nginx/modules
+  797  vi /etc/nginx/nginx.conf
+  798  nano /etc/nginx/nginx.conf
+  799  clear
+  800  cd ..
+  801  cd /etc/nginx/
+  802  ls
+  803  nano nginx.conf.dpkg-dist 
+  804  cd conf.d/
+  805  ls
+  806  cd ..
+  807  cd /usr/share/nginx/
+  808  ls
+  809  cd modules
+  810  ld
+  811  ls
+  812  cp /etc/nginx/modules/ngx_http_testcookie_access_module.so .
+  813  ls
+
+
+
+
