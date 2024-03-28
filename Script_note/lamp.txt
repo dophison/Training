@@ -40,7 +40,7 @@ https://www.hostinger.com/tutorials/how-to-install-laravel-on-ubuntu
 
 https://ubuntu.com/tutorials/install-and-configure-wordpress#4-configure-apache-for-wordpress
 
-sudo a2enmod ssl
+
 
 openssl req -out laravel.csr -new -newkey rsa:2048 -nodes -keyout laravel.key
 
