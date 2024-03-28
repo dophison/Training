@@ -40,6 +40,8 @@ https://www.hostinger.com/tutorials/how-to-install-laravel-on-ubuntu
 
 https://ubuntu.com/tutorials/install-and-configure-wordpress#4-configure-apache-for-wordpress
 
+sudo a2enmod sslemd[1]: haproxy.service: Failed with result 'exit-code'.
+Mar 26 00:55:59 son systemd[1]: Failed to start HAProxy Load Balancer.
 
 
 openssl req -out laravel.csr -new -newkey rsa:2048 -nodes -keyout laravel.key
@@ -50,9 +52,7 @@ sudo haproxy -c -f /etc/haproxy/haproxy.cfg
  haproxy.service: Scheduled restart job, restart counter is at 5.
 Mar 26 00:55:59 son systemd[1]: Stopped HAProxy Load Balancer.
 Mar 26 00:55:59 son systemd[1]: haproxy.service: Start request repeated too quickly.
-Mar 26 00:55:59 son systemd[1]: haproxy.service: Failed with result 'exit-code'.
-Mar 26 00:55:59 son systemd[1]: Failed to start HAProxy Load Balancer.
-
+Mar 26 00:55:59 son syst
 
 iptables -t nat -L -n -v
 
@@ -86,7 +86,7 @@ apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
   686  ls
   687  cd nginx-1.22.1
   688  ls
-  689  ./configure --prefix=/etc/nginx --pid-makpath=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
+  689  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
   690  apt-get install libpcre3 libpcre3-dev
   691  clear
   692  ./configure --prefix=/etc/nginx --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --sbin-path=/usr/sbin/nginx --user=nginx --group=nginx --with-http_ssl_module
