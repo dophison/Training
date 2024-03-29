@@ -303,11 +303,11 @@ _Dùng iptables nat traffic vào port 80 của ip vps lab sẽ được foward s
 ``iptables -t nat -A PREROUTING -p tcp --dport 80 -d 14.225.217.222 -j DNAT --to-destination 192.168.0.83:3306``
 
 
-![iptables](Script_task/Images/Stage3_1/add_rule_prerouting.png)
+![iptables](/Images/Stage3_1/add_rule_prerouting.png)
 
 Sau đó dùng máy remote truy cập vào trong 14.225.217.222:80. Và kiểm tra log của mysql thì thấy có ghi lại lần truy cập => rule đã chuyển tiếp.
 
-![iptables](Script_task/Images/Stage3_1/logmysql.png)
+![iptables](/Images/Stage3_1/logmysql.png)
 
 
 # Bổ sung
