@@ -62,7 +62,6 @@ def check_install_app():
     except subprocess.CalledProcessError:
         subprocess.run("curl https://rclone.org/install.sh | sudo bash", shell=True)
 
-
 ## Func backup
 def backup_mysql_db(username, password, output_dir, current_datetime):
 
@@ -114,7 +113,6 @@ def sync(backup_dir, num_files,config_file, current_remote):
         #File cấu hình cần access key nên không thể hoàn chỉnh từ ở mỗi client.
         #Yuppp hướng là vậy, sẽ suy nghĩ thêm :<
 
-
 def main():
 
     #Define var which connect to mysql
@@ -129,7 +127,6 @@ def main():
     current_datetime = subprocess.run('date +"%Y-%m-%d_%H-%M-%S"', shell=True, capture_output=True, text=True)
     current_datetime = current_datetime.stdout.strip() #Formating datetime 
     
-
     ##set up paramater for func sync
     #path dùng đẻ kiểm tra tồn tại rclone.conf 
     config_dir = os.path.expanduser('~/.config/rclone')
@@ -147,7 +144,6 @@ if __name__ == "__main__":
     main()
 
 ```
-
 
 ## Script generate CSR + private key
 
@@ -200,7 +196,6 @@ def generate_csr_and_private_key(common_name, output_dir, password_decrypt_PR, f
 
     return private_key_path, csr_path
 
-
 def main():
     #common_name = tên miền
     common_name = "test.com"
@@ -223,11 +218,7 @@ if __name__ == "__main__":
 
 ```
 
-
-
 ## Script compile nginx với  module testcookie
-
-
 
 _Bức tranh toàn cảnh: Sử dụng python kết hợp cùng package subprocess để thực hiện các cmd._
 
@@ -332,11 +323,8 @@ def install_nginx_source(version,path_module):
         sys.exit(1)
     print("Configuring and making OK!")
 
-
-
 #Thuc hien viec check port mac dinh cua nginx co bi chiem boi apache hay cac ung dung nao khong
     #something
-
 
 def processing_nginx(version, port, server_name,path_module):
 
@@ -382,17 +370,12 @@ def processing_nginx(version, port, server_name,path_module):
 
     with open(nginx_service_path, "w") as f:
         f.write(nginx_service_content)
-
     subprocess.run("systemctl daemon-reload", shell=True)
 
 #Edit file nginx.conf
     edit_nginx_config()
-
     subprocess.run("service nginx start", shell=True)
-
     subprocess.run("service nginx status", shell=True)
-
-
 
 # Func add module for nginx
 
@@ -451,17 +434,13 @@ def edit_nginx_config():
 
         testcookie_fallback http://google.com;
 
-
         #configuring whitelist
         testcookie_whitelist {{
             8.8.8.8/32;
     }}
 
     default_type  application/octet-stream;
-
-
     sendfile        on;
-
     keepalive_timeout  65;
     
     server {{
@@ -482,12 +461,10 @@ def edit_nginx_config():
     }}
     }}
     """
-
     with open(nginx_conf_path, "w") as f:
         f.write(nginx_config)
 
     print("Added nginx configuration to nginx.conf successfully.")
-
 
 #Define main()
 
