@@ -526,8 +526,6 @@ Sau khi xác minh thì CA sẽ phát hành chứng chỉ SSL theo các bước n
 
 _Giải thích được mô hình testcookie hoạt động như thế nào._
 
-Script compile nginx với  module testcookie. Confirm testcookie hoạt động. Giải thích được mô hình testcookie hoạt động như thế nào.
-
 Mô hinh testcookie phát hiện xem một yêu cầu HTTP có phải là của một máy tính thực sự hay của một botnets hoạt động  
 
 Thêm cookie vào yêu cầu: Mô hình Testcookie sẽ thêm một cookie vào phản hồi HTTP mà máy chủ web gửi đến trình duyệt của người dùng. 
