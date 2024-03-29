@@ -27,14 +27,14 @@ Demo
 
 ![backupmysql](/Script_task/Image/script_backup_sync_complete.png)
 
-![backupmysql](/Image/ggdrive_sync.png)
+![backupmysql](/Script_task/Image/ggdrive_sync.png)
 
 
 > Trong trường hợp này, có thế dùng ``crontab`` để lập lịch cho script chạy trong khoảng thời gian chỉ định (1 lần mỗi ngày,...)
 
 + TH2: Với ``rclone`` chưa được cài đặt lẫn config
 
-![backupmysql](Script_task/Image/mysqlbackupwithnorclone.png)
+![backupmysql](/Script_task/Image/mysqlbackupwithnorclone.png)
 
 
 ```python
@@ -160,11 +160,11 @@ Xử lý:
 
 - Tạo ra các file ngay trong folder chạy script -> exception quăng ra khi đã tồn tại trùng file.
 
-![generateCSR](/Image/exception_script_genCSR.png)
+![generateCSR](/Script_task/Image/exception_script_genCSR.png)
 
 Minh họa tạo thành công
 
-![generateCSR](/Image/script_genCSR.png)
+![generateCSR](/Script_task/Image/script_genCSR.png)
 
 ```python
 
@@ -243,11 +243,11 @@ Script thực hiện được:
 
 Sau khi chạy script hiển thị các dòng thông báo này là ok!
 
-![nginx_module](/Image/script_nginx_run.png)
+![nginx_module](/Script_task/Image/script_nginx_run.png)
 
 Minh họa testcookie hoạt động
 
-![generateCSR](/Image/redirect_google.png)
+![generateCSR](/Script_task/Image/redirect_google.png)
 
 
 Hướng tối ưu hóa:
