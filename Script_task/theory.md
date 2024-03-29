@@ -522,8 +522,7 @@ Quá trình xác thực chủ sở hữu domain được thực hiện trước 
 Sau khi xác minh thì CA sẽ phát hành chứng chỉ SSL theo các bước như hình. 
 
 
-
-![SSL](/Image/2024-03-26_17-21.png)
+![SSL](/Script_task/Image/2024-03-26_17-21.png)
 
 _Giải thích được mô hình testcookie hoạt động như thế nào._
 
@@ -539,6 +538,7 @@ Phân tích yêu cầu: Máy chủ web sẽ phân tích yêu cầu mới này v�
 
 Nếu yêu cầu không bao gồm cookie, hoặc nếu cookie không hợp lệ, máy chủ web có thể kết luận rằng đó có thể là một cuộc tấn công từ một botnets, vì người dùng thực sự sẽ gửi lại cookie đó.
 
+![SSL](/Script_task/Image/simple_set-cookie.png)
 
 
 
