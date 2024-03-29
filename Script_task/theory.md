@@ -25,9 +25,9 @@ Demo
 
 + TH1: Với ``rclone`` được cài đặt và config sãn sàng
 
-![backupmysql](Script_task/Image/script_backup_sync_complete.png)
+![backupmysql](/Script_task/Image/script_backup_sync_complete.png)
 
-![backupmysql](Script_task/Image/ggdrive_sync.png)
+![backupmysql](/Image/ggdrive_sync.png)
 
 
 > Trong trường hợp này, có thế dùng ``crontab`` để lập lịch cho script chạy trong khoảng thời gian chỉ định (1 lần mỗi ngày,...)
