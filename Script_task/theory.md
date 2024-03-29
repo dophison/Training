@@ -3,11 +3,10 @@
 
 # Table of contents
 
-
 1. [Script](#script)
 2. [Giải thích SSL và testcookie](#giải-thích)
 
-
+(Các script đã hoạt động trên môi trường Ubuntu 20.04 LTS tương ứng với các lưu ý của từng script)
 
 # Script
 
