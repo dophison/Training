@@ -43,7 +43,7 @@
 
    [SSH](#ssh)
 
-   [scp](#scp)laravel-laravel-087543a/
+   [scp](#scp)
 
 
    [rsync](#rsync)
@@ -74,6 +74,22 @@
 
     [Standard Error (stderr)](#standard-error-stderr)    
     
+
+Task tìm hiểu về Linux: 
+
+- Về liệt kê danh sách file/thư mục, cách show các file ẩn trong thư mục, e nên tìm hiểu thêm option ls -la thay vì ls -l -> cái này mình sẽ hay dùng.
+
+- Về phần tiến trình em tìm hiểu thêm pkill và kill khác gì nhau
+
+- Về phần Permission, e ghi rõ ra giúp a các quyền và các quyền đó được gán giá trị bao nhiêu.
+
+- Về phần sed, sed 's/Aenean/Asenal/' son in home.txt command này chỉ thay đổi chuỗi Aenean đầu tiên của file nếu tìm kiếm được thành Asenal, em tìm hiểu thêm option để có thể thay thế toàn bộ file.
+
+- netstat em nên tìm hiểu thêm option để có thể hiển thị chi tiết hơn với PID/Program name của các tiến trình.
+
+
+# Liệt kê dda
+
     
 # Tìm kiếm một file, directory
 
@@ -243,7 +259,7 @@ Tiêu diệt bằng cách:
 - si : Thời gian CPU sử dụng cho xử lý các ngắt phần mềm.
 - st : Thời gian CPU liên quan đến phần ảo hóa.
 
-### Stress-testing the system’s CPU by _stress tool_
+### Stress-testing the system’s CPU by stress tool
 
 Sau khi cài đặt: ```sudo apt install stress```
 

@@ -13,12 +13,14 @@
 
 ## Script backup mysql and sync to GG Drive
 
+Bonus thêm vào file log
+
 _Bức tranh toàn cảnh: Sử dụng python kết hợp cùng package subprocess để thực hiện các cmd._
 
 Vấn đề chưa giải quyêt: 
-- Với việc sử dụng ``rclone`` client phải thực hiện ``rclone config`` đê có file rclone.conf để thực hiện lấy access key kết nối đến GG Driver. Nếu không sẽ throw error và thoát script.
+- Với việc sử dụng ``rclone`` client phải thực hiện ``rclone config`` để có file rclone.conf để thực hiện lấy access key kết nối đến GG Driver. Nếu không sẽ throw error và thoát script.
 
-- Việc xác định hệ điêu hành cũng là quan trọng để có thê chạy script một cách thuận lợi nhất.
+- Việc xác định hệ điêu hành cũng là quan trọng để có thể chạy script một cách thuận lợi nhất.
 
 Demo 
 
