@@ -1,6 +1,8 @@
 
 # Table of content
 
+[Liệt kê danh sách thư mục](#liệt-kê-danh-sách-thư-mục)
+
 1. [Tìm kiếm một file, directory](#tìm-kiếm-một-file-directory)
 
     [Với tên hoặc bằng extension (ví dụ .jpg)](#với-tên-hoặc-bằng-extension-ví-dụ-jpg)
@@ -75,20 +77,11 @@
     [Standard Error (stderr)](#standard-error-stderr)    
     
 
-Task tìm hiểu về Linux: 
+# Liệt kê danh sách thư mục
 
-- Về liệt kê danh sách file/thư mục, cách show các file ẩn trong thư mục, e nên tìm hiểu thêm option ls -la thay vì ls -l -> cái này mình sẽ hay dùng.
-
-- Về phần tiến trình em tìm hiểu thêm pkill và kill khác gì nhau
-
-- Về phần Permission, e ghi rõ ra giúp a các quyền và các quyền đó được gán giá trị bao nhiêu.
-
-- Về phần sed, sed 's/Aenean/Asenal/' son in home.txt command này chỉ thay đổi chuỗi Aenean đầu tiên của file nếu tìm kiếm được thành Asenal, em tìm hiểu thêm option để có thể thay thế toàn bộ file.
-
-- netstat em nên tìm hiểu thêm option để có thể hiển thị chi tiết hơn với PID/Program name của các tiến trình.
+``ls -la ``: dùng để liệt kê tất cả các tệp (quyền truy cập, chủ sở hữu, nhóm sở hữu, kích thước, thời gian sửa đổi,...), bao gồm cả các tệp ẩn (dạng .tên file).
 
 
-# Liệt kê dda
 
     
 # Tìm kiếm một file, directory
@@ -301,6 +294,21 @@ Kich bản sử dụng là sẽ có một tiến trình stress chạy và dùng 
 
 ![Process](/Images/kill.png)
 
+Sự khác nhau giữa ``pkill`` và ``kill``
+
+``kill [signal or option] PID(s)``
+
+Signal có thể là: _SIGHUP 1 ; SIGKILL 9; SIGTERM 15_
+
+``pgrep`` tìm id từ tên tiến trình (vd: pgrep mysqld)
+
+``pkill Process Name`` (không cần phải tìm id như ``kill``)
+
+Có thể chấm dứt tiến trình theo ID group (PGID): ``pkill -g 1234``
+
+
+
+
 ## Working with dicrection and folder 
 
 Liệt kê danh sách file/thư mục, cách show các file ẩn trong thư mục
@@ -326,7 +334,13 @@ Tìm kiếm, copy, di chuyển,... file/thư mục
 
 # Permission
 
-```chmod```: dùng đê cấp quyền cho file, thư mục, bao gồm các quyền như read, write, execute 
+Cơ bản về quyền:
+
++ r (read): 100 (4)
++ w (write): 010 (2)
++ e (execute): 001 (1)
+
+```chmod```: dùng để cấp quyền cho file, thư mục, bao gồm các quyền như read, write, execute 
 ```chmod [OPTION]... OCTAL-MODE FILE...```
 
 ![Permit](/Images/chmod.png)
@@ -496,7 +510,11 @@ Thực hiện việc đồng bộ từ máy local lên máy VPS thông qua  ```r
 
 ``sed OPTIONS... [SCRIPT] [INPUTFILE...] ``
 
+``sed -i 's/Aenean/Asenal/g' son_in_home.txt`` : thay đôi trong ngay trong file với -i và /g dùng đê thay thế toàn bộ.
+
 ![Workwithfile](/Images/sed.png)
+
+
 
 # Traceroute
 Dùng traceroute để trace từ máy remote đến ip 103.200.22.11 và nêu ra quá trình đó cần đi qua các hop nào.
@@ -518,6 +536,9 @@ Các tham số thường dùng:
 - t : hiển thị các kết nối liên quan đến TCP.
 - u : hiển thị các kết nối liên quan đến UDP.
 - l : chỉ hiện các cổng đang nghe.
+
+Dùng ``netstat -plant`` để hiển thị  chi tiết hơn với PID/Program name
+
 
 ![Netstat](/Images/netstat.png)
 
