@@ -52,7 +52,7 @@
 
 10. [Working with file](#working-with-file)
 11. [Traceroute](#traceroute)
-12. [Netstat](#netstat)
+12. [Netstat](#netstat-network-statistic)
 13. [Print](#print)
 
 
